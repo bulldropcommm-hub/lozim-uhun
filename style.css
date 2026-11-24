@@ -320,10 +320,10 @@ body.dark .about-content li {
 .projects {
   background-color: black;
   width: 100%;
-  padding: 300px;
+  padding: 120px 5%;
 }
 .container {
-  width: 90%;
+  width: min(100%, 1200px);
   margin: 0 auto;
 }
 .projects-title {
@@ -363,8 +363,8 @@ body.dark .about-content li {
     rgba(0, 0, 0, 1) 65.8%,
     rgba(255, 22, 22, 1) 100.2%
   );
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: 260px;
 }
 .projects-img-2 {
   background-image: linear-gradient(
@@ -372,8 +372,8 @@ body.dark .about-content li {
     rgba(34, 126, 34, 1) 8%,
     rgba(99, 162, 17, 1) 86.9%
   );
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: 260px;
 }
 .projects-img-3 {
   background-image: linear-gradient(
@@ -381,8 +381,8 @@ body.dark .about-content li {
     rgba(5, 23, 111, 1) 16.4%,
     rgba(24, 95, 240, 1) 64.5%
   );
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: 260px;
 }
 .projects-project-info {
   padding: 20px;
@@ -541,6 +541,224 @@ a:hover {
 }
 .aloqa {
   color: orangered;
+}
+
+/* Responsive layouts */
+img,
+textarea,
+input {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .asosiy {
+    height: auto;
+  }
+
+  .fon {
+    min-height: 680px;
+    height: calc(100svh - 80px);
+    max-height: 900px;
+    padding: 50px 24px 180px;
+  }
+
+  .ism {
+    font-size: clamp(48px, 10vw, 76px);
+  }
+
+  .familiya {
+    font-size: clamp(52px, 11vw, 82px);
+  }
+
+  .about-container {
+    gap: 40px;
+  }
+
+  .about-image img {
+    width: min(34vw, 320px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .projects-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 16px;
+    gap: 10px;
+    font-size: 17px;
+  }
+
+  .navbar ul {
+    gap: 2px;
+    font-size: 14px;
+  }
+
+  .navbar li {
+    padding: 8px 6px;
+  }
+
+  .theme-btn {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .fon {
+    min-height: 680px;
+    height: calc(100svh - 62px);
+    padding: 40px 18px 210px;
+  }
+
+  .yozuv-1 {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .ism {
+    font-size: clamp(42px, 12vw, 64px);
+  }
+
+  .familiya {
+    font-size: clamp(44px, 12vw, 66px);
+  }
+
+  .yozuv-2 {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .yozuv-2 br,
+  .footer-qism-1 > p br {
+    display: none;
+  }
+
+  .tugma {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .button-1,
+  .button-2 {
+    height: 48px;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .button-1 {
+    width: min(220px, 60vw);
+  }
+
+  .button-2 {
+    width: 125px;
+  }
+
+  .fon .oxiri {
+    padding: 18px 8px;
+  }
+
+  .fon .oxiri ul {
+    width: 100%;
+    justify-content: space-around;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .fon .oxiri li {
+    flex: 1;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .fon .oxiri li:not(:last-child) {
+    padding-right: 8px;
+    margin-right: 0;
+  }
+
+  .about {
+    padding: 64px 22px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 38px;
+  }
+
+  .about-image {
+    text-align: center;
+  }
+
+  .about-image img {
+    width: min(78vw, 320px);
+  }
+
+  .about-content h2 {
+    font-size: 34px;
+  }
+
+  .projects {
+    padding: 76px 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .projects-title h1 {
+    margin-top: 24px;
+    font-size: 32px;
+  }
+
+  .projects-projects {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects-img-1,
+  .projects-img-2,
+  .projects-img-3 {
+    height: 220px;
+  }
+
+  .projects-project-info {
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .footer {
+    min-height: 0;
+    padding: 64px 22px 105px;
+    gap: 38px;
+  }
+
+  .footer-qism-1 h1 {
+    font-size: 34px;
+  }
+
+  .footer-qism-1 > p {
+    margin-bottom: 24px;
+  }
+
+  .footer-qism-1 span {
+    margin-right: 8px;
+    letter-spacing: 1px;
+  }
+
+  .footer-qism-2 button {
+    margin-top: 12px;
+  }
+
+  .footer-qism-2 .oxiri {
+    bottom: 0;
+    padding: 18px 10px;
+    font-size: 12px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 900px) {
