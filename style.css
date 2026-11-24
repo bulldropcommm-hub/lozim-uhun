@@ -551,6 +551,18 @@ input {
 }
 
 @media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 8%;
+    gap: 50px;
+  }
+
+  .footer-qism-1,
+  .footer-qism-2 {
+    width: 100%;
+  }
+
   .asosiy {
     height: auto;
   }
@@ -761,16 +773,3 @@ input {
   }
 }
 
-@media (max-width: 900px) {
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 60px 8%;
-    gap: 50px;
-  }
-
-  .footer-qism-1,
-  .footer-qism-2 {
-    width: 100%;
-  }
-}
