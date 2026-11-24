@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="asosiy">
+      <nav class="navbar">
+        <b>A.V</b>
+        <ul>
+          <li><a href="#about">haqida</a></li>
+          <li><a href="#projects">ishlar</a></li>
+          <li><a href="#footer">aloqa</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+      </nav>
+      <div class="fon">
+        <div class="fon-img"></div>
+        <div class="fon-owerlay"></div>
+        <div class="open">
+          <p class="yozuv-1">FRONTEND DEVELOPER</p>
+          <h1 class="ism">Akbarshox</h1>
+          <h1 class="familiya"><i>Vohidjanov</i></h1>
+          <p class="yozuv-2">
+            Dizayn va kod orasidagi chegarani yo'qotgan tajribalar<br />
+            yarataman
+          </p>
+          <div class="tugma">
+            <button class="button-1" type="button">
+              <a href="#projects">Ishlarimni ko'rish</a>
+            </button>
+            <button class="button-2" type="button">Bog'lanish</button>
+          </div>
+          <div class="oxiri">
+            <ul>
+              <li>
+                <span>20+</span>
+                <span>LOYIHA</span>
+              </li>
+              <li>
+                <span>2+</span>
+                <span>YIL TAJRIBA</span>
+              </li>
+              <li>
+                <span>100%</span>
+                <span>MIJOZ MAMNUNIYATI</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="about" id="about">
+        <div class="about-container">
+          <div class="about-image">
+            <img src="rasm.jpg" alt="Mening rasmim" />
+          </div>
+
+          <div class="about-content">
+            <span>MEN HAQIMDA</span>
+
+            <h2>Men kim?</h2>
+            <p>
+              Men web dasturlashga qiziqaman. Zamonaviy va chiroyli saytlar
+              yaratishni o‘rganib kelyapman.
+            </p>
+
+            <p>
+              Har kuni yangi bilimlar va tajribalar orttirishga harakat qilaman.
+            </p>
+
+            <ul>
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>Frontend</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div id="projects" class="projects">
+        <div class="container">
+          <div class="projects-title">
+            <span>-LOYIHALAR</span>
+            <h1>ISHLARIM</h1>
+          </div>
+          <div class="projects-projects">
+            <div class="projects-project">
+              <div class="projects-img-1"></div>
+              <div class="projects-project-info">
+                <span>Web App</span>
+                <h3>E-Commerce Platform</h3>
+                <p>
+                  To`liq funksional onlayn do`kon - React va Node.js yordamida.
+                </p>
+                <a href="">ko'rish</a>
+              </div>
+            </div>
+            <div class="projects-project">
+              <div class="projects-img-2"></div>
+              <div class="projects-project-info">
+                <span>landing Page</span>
+                <h3>Startup Branding</h3>
+                <p>Yangi startap uchun zamonaviy brending va landing Page</p>
+                <a href="">ko'rish</a>
+              </div>
+            </div>
+            <div class="projects-project">
+              <div class="projects-img-3"></div>
+              <div class="projects-project-info">
+                <span>Dashboard</span>
+                <h3>Analytics Panel</h3>
+                <p>Ma`lumotlarni vizualizatsiya qiluvchi boshqaruv paneli</p>
+                <a href="">ko'rish</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer" id="footer">
+        <div class="footer-qism-1">
+          <span class="aloqa">-ALOQA</span>
+          <h1>Gaplashamiz?</h1>
+          <p>
+            Yangi loyiha, hamkorlik yoki oddiy savol bo`lsa -<br />
+            menga yozing, 24 soat ichida javob beraman.
+          </p>
+          <hr />
+          <h4>EMAIL</h4>
+          <p>youtuberlar@gmail.com</p>
+          <hr />
+          <h4>JOYLASHUV</h4>
+          <p>NAMANGAN,O'ZBEKISTON</p>
+          <hr />
+          <span class="one">GITHUB</span>
+          <span class="one">INSTAGRAM</span>
+          <span class="one">TELEGRAM</span>
+        </div>
+        <div class="footer-qism-2">
+          <label for="name">ISMINGIZ</label>
+          <input type="text" id="name" placeholder="Akbarshox Vohidjanov" />
+          <hr />
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" placeholder="Siz@gmail.com" />
+          <hr />
+          <label for="mavzu">MAVZU</label>
+          <input type="text" id="mavzu" placeholder="Loyiha haqida" />
+          <hr />
+          <label for="xabar">HABAR</label>
+          <textarea
+            name="text"
+            id="xabar"
+            placeholder="habaringizni yozing"
+          ></textarea>
+          <hr />
+          <button type="button">YUBORISH</button>
+          <h2 class="oxiri">
+            © 2026 Axrorbek Nomonjonov Toshkent, O`zbekiston
+          </h2>
+        </div>
+      </footer>
+      <script>
+        const btn = document.getElementById("themeToggle");
+
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark");
+          btn.textContent = "☀️";
+        }
+
+        btn.addEventListener("click", function () {
+          document.body.classList.toggle("dark");
+
+          if (document.body.classList.contains("dark")) {
+            btn.textContent = "☀️";
+            localStorage.setItem("theme", "dark");
+          } else {
+            btn.textContent = "🌙";
+            localStorage.setItem("theme", "light");
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
