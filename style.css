@@ -125,11 +125,13 @@ a {
 .ism {
   color: white;
   font-size: 90px;
+  opacity: 0;
 }
 
 .familiya {
   color: orangered;
   font-size: 110px;
+  opacity: 0;
 }
 
 .yozuv-2 {
@@ -772,4 +774,19 @@ input {
     text-align: center;
   }
 }
-
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.ism {
+  animation: fadeUp 1.5s linear forwards;
+}
+.familiya {
+  animation: fadeUp 1.5s linear forwards;
+}
